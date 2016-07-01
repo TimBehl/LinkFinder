@@ -9,7 +9,6 @@ import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 public class LinkFinder {
 	
 	ArrayList<String> listOfLinks = new ArrayList<String>();
@@ -30,7 +29,7 @@ public class LinkFinder {
 		
 		try {
 			while((strLine = br.readLine()) != null){
-				String pattern = ".*[Aa]\\s[Hh][Rr][Ee][Ff]=\\\"(.*?)\\\".*";
+				String pattern = ".*[Aa]\\s+[Hh][Rr][Ee][Ff]\\s*=\\s*\"(.*?)\".*";
 				Pattern p = Pattern.compile(pattern);
 				Matcher m = p.matcher(strLine);
 				if(m.matches()){
