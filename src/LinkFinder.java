@@ -4,11 +4,20 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class LinkFinder {
-		
+	
+	//account for whitespace between the tags and a
+	//account for features that aren't whitespace
+	//<[Aa][^[Hh][Rr][Ee][Ff]]*[[Hh][Rr][Ee][Ff]]{1}\\s*=\\s\\\"(\\S)\\\".*
+	
+	ArrayList<String> listOfLinks = new ArrayList<String>();
+	
 	public static void main(String[] args) throws FileNotFoundException {
 		FileInputStream fstream = new FileInputStream("Links/neumont.edu");
 		LinkFinder finder = new LinkFinder();
@@ -21,7 +30,13 @@ public class LinkFinder {
 		
 		try {
 			while((strLine = br.readLine()) != null){
-				System.out.println(strLine);
+				String pattern = ".*";
+				Pattern p = Pattern.compile(pattern);
+				Matcher m = p.matcher(strLine);
+				if(m.matches()){
+					listOfLinks.add(m.group(1));
+					System.out.println(m.group(1));
+				}
 			}
 		} catch (IOException e) {
 			System.out.println("IO Exception.");
@@ -32,5 +47,4 @@ public class LinkFinder {
 	public Iterator<String> getLinks(){
 		return null;
 	}
-	
 }
