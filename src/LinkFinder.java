@@ -12,10 +12,6 @@ import java.util.regex.Pattern;
 
 public class LinkFinder {
 	
-	//account for whitespace between the tags and a
-	//account for features that aren't whitespace
-	//<[Aa][^[Hh][Rr][Ee][Ff]]*[[Hh][Rr][Ee][Ff]]{1}\\s*=\\s\\\"(\\S)\\\".*
-	
 	ArrayList<String> listOfLinks = new ArrayList<String>();
 	
 	public static void main(String[] args) throws FileNotFoundException {
@@ -30,7 +26,7 @@ public class LinkFinder {
 		
 		try {
 			while((strLine = br.readLine()) != null){
-				String pattern = ".*";
+				String pattern = ".*[Aa]\\s[Hh][Rr][Ee][Ff]=\\\"(.*?)\\\".*";
 				Pattern p = Pattern.compile(pattern);
 				Matcher m = p.matcher(strLine);
 				if(m.matches()){
