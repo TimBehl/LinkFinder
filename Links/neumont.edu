@@ -459,7 +459,10 @@ var _gaq = _gaq || [];
             </div>
             <div id="globalcontent_4">
                 <div class="fourBoxes fourLinks">
-                    <a href="/nuservices/request_information.aspx" class="fourBox yellow" onclick="_gaq.push(['_trackEvent', 'Information', 'Click',,, false]);"><span class="fourHeader">Request Info</span> <span>Get your copy of our award-winning viewbook.</span></a> <a href="application/index.html" class="fourBox blue"><span class="fourHeader">Apply Now</span> <span>Begin your Application for Admission to Neumont.</span></a> <a href="/chat.html" class="fourBox green"><span class="fourHeader">CHAT WITH US&nbsp;</span><span>Get the answers to all your questions.</span></a> <a href="http://neumont.edu/campustour/index.html" class="fourBox red last" target="_blank"><span class="fourHeader">Campus Tour</span>Check out our amazing campus in this online tour.</a>
+                    <a href="/nuservices/request_information.aspx" class="fourBox yellow" onclick="_gaq.push(['_trackEvent', 'Information', 'Click',,, false]);"><span class="fourHeader">Request Info</span> <span>Get your copy of our award-winning viewbook.</span></a>
+                    <a href="application/index.html" class="fourBox blue"><span class="fourHeader">Apply Now</span> <span>Begin your Application for Admission to Neumont.</span></a>
+                    <a href="/chat.html" class="fourBox green"><span class="fourHeader">CHAT WITH US&nbsp;</span><span>Get the answers to all your questions.</span></a>
+                    <a href="http://neumont.edu/campustour/index.html" class="fourBox red last" target="_blank"><span class="fourHeader">Campus Tour</span>Check out our amazing campus in this online tour.</a>
                 </div>
             </div>
             <footer id="mainFooter">
@@ -524,7 +527,8 @@ var _gaq = _gaq || [];
                         </h5>
                         <p>
                             <a href="academiccalendar/index.html">Academic Calendar<br></a>
-                            <a href="consumerdisclosures.html">Consumer Disclosures<br></a> <a href="/about-us/contact-us.html">Contact Us</a><br>
+                            <a href="consumerdisclosures.html">Consumer Disclosures<br></a>
+                            <a href="/about-us/contact-us.html">Contact Us</a><br>
                             <a href="catalog.html">Course Catalog</a><br>
                             <a href="about-us/documents.html">Important Documents<br></a>
                             <a href="neumontreviews.html">Neumont Reviews</a><br>
