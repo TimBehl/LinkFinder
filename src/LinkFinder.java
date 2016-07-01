@@ -18,6 +18,10 @@ public class LinkFinder {
 		FileInputStream fstream = new FileInputStream("Links/neumont.edu");
 		LinkFinder finder = new LinkFinder();
 		finder.processPage(fstream);
+		Iterator<String> listIterator = finder.getLinks();
+		while(listIterator.hasNext()){
+			System.out.println(listIterator.next());
+		}
 	}
 	
 	public void processPage(InputStream in){
@@ -31,7 +35,6 @@ public class LinkFinder {
 				Matcher m = p.matcher(strLine);
 				if(m.matches()){
 					listOfLinks.add(m.group(1));
-					System.out.println(m.group(1));
 				}
 			}
 		} catch (IOException e) {
@@ -41,6 +44,6 @@ public class LinkFinder {
 	}
 	
 	public Iterator<String> getLinks(){
-		return null;
+		return listOfLinks.iterator();
 	}
 }
